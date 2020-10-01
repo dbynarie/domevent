@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: ghostwhite;
+    user-select: none;
+    font-family: 'Dosis', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+
+}
+
+.modalMenu {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.900);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 20px;
+    z-index: 200;
+
+}
+
+.modalMenu a {
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+.modalMenu a:hover {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: crimson;
+}
+
+.navbar {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: crimson;
+    padding: 0 10%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+.brand {
+    font-size: 2rem;
+    color: white;
+    font-weight: 100;
+    font-family: 'Lobster', cursive;
+
+}
+
+.menuIcon {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-left: auto;
+
+}
+
+.menuIcon:hover {
+    color: black;
+
+}
+
+.closeIcon {
+    font-size: 2rem;
+    color: red;
+    position: fixed;
+    top: 10vh;
+    right: 10vw;
+}
+
+.closeIcon:hover {
+    font-size: 3rem;
+}
+
+.container section {
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-style: oblique;
+    font-weight: bolder;
+}
+
+.home {
+    background-image: url(./the-background-301145_1280.png);
+    justify-content: center;
+    align-items: center;
+}
+
+.heroImage {
+    width: 250px;
+    height: 250px;
+    border-radius: 500px;
+    object-fit: cover;
+    opacity: 0;
+    object-position: top;
+    animation-name: bottomToTop;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+}
+
+.heroText {
+    color: white;
+    font-size: 3rem;
+    opacity: 0;
+    animation-name: bottomToTop;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    font-family: 'Playball', cursive;
+    animation-fill-mode: forwards;
+}
+
+
+.about {
+    background-image: url(https://picsum.photos/seed/92/900);
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+.gallery {
+    background-image: url(https://picsum.photos/seed/98/900);
+    justify-content: center;
+    align-items: center;
+
+}
+
+.galIcon {
+    font-size: 8rem;
+    color: white;
+    animation-name: iniRotate;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+.contact {
+    background-image: url(https://picsum.photos/seed/28/900);
+}
+
+footer {
+    width: 100vw;
+    height: 55vh;
+    display: flex;
+    padding: 0 10%;
+    color: white;
+    background-color: black;
+}
+
+.left {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.right {
+    width: 70%;
+    height: 100%;
+    display: flex;
+}
+
+.col1,
+.col2 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+}
+
+.formGroup {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.kirim {
+    width: 100%;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+}
+
+.aboutAlert {
+    width: 100vw;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: ivory;
+    color: blue;
+    position: sticky;
+    top: 10vh;
+    left: 0;
+}
+
+@keyframes bottomToTop {
+    from {
+        transform: translateY(20vh);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
+
+@keyframes iniRotate {
+    from {
+        transform: rotateX(360deg);
+    }
+
+    to {
+        transform: rotateZ(0);
+    }
+}
